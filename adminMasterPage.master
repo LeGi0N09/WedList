@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="adminMasterPage.master.cs" Inherits="adminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title></title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Weddlist" />
+<meta name="MobileOptimized" content="320" />
+<link href="images/favicon.ico" rel="icon" type="image/x-icon"/> <!-- favicon -->
+<!-- theme style -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/> <!-- bootstrap css -->
+<!-- revolution -->   
+<link rel="stylesheet" type="text/css" href="revolution/css/settings.css"/> <!-- revolution setting css -->
+<link rel="stylesheet" type="text/css" href="revolution/css/layers.css"/>  <!-- revolution layer css --> 
+<!-- end revolution -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/> <!-- fontawesome css -->
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"/> <!-- google fonts -->
+<link href="css/menumaker.css" rel="stylesheet" type="text/css"/> <!-- menu css -->
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/> <!-- owl carousel css -->
+<link href="css/magnific-popup.css" rel="stylesheet" type="text/css"/> <!-- magnify popup css -->
+<link href="css/datepicker.css" rel="stylesheet" type="text/css"/> <!-- datepicker css -->
+<link href="css/flaticon.css" rel="stylesheet" type="text/css"/> <!-- flaticon css -->
+<link href="css/style.css" rel="stylesheet" type="text/css"/> <!-- custom css -->
+<link href="css/stucture.css" rel="stylesheet" type="text/css"/> <!-- stucture css -->
+<!-- end theme style -->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+          <!-- preloader --> 
+  <div class="preloader">
+    <div class="status">
+      <div class="status-message">
+      </div>
+    </div>
+  </div>
+<!-- end preloader --> 
+             <section class="top-nav-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="top-text">Welcome to Weddlist</div>
+        </div>
+        <div class="col-sm-6">
+          <div class="top-detail text-right">
+            <ul>
+              <li><a href="privacy.aspx">Privacy</a></li>
+              <li><a href="faq.aspx">Faq</a></li>
+              <li><a href="help.aspx">Help</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+       
+    </div>
+  </section>
+<!--  end top bar -->
+        <!--  navigation -->
+  <header id="nav-bar" class="nav-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-3">
+          <div class="wedding-logo">
+            <a href="admin_dashboard.aspx"><img src="images/logo.png" class="img-responsive" alt="logo"/></a>
+          </div>
+        </div>
+        <div class="col-md-10 col-sm-9">
+          <div class="navigation">
+            <div id="cssmenu">
+              <ul class="css-menu">
+                
+                
+                                             
+                  <li><a><asp:Button ID="Button1" class="btn btn-pink" runat="server" Text="Log Out"  Font-Bold="True" OnClick="Button1_Click1" /></a></li>
+             </ul>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </header> 
+<!--  end navigation -->
+
+        <!-- page banner -->
+  <section id="page-banner" class="page-banner bg-dark" style="background-image: url('images/banner-2.jpg');"> 
+    <div class="overlay-bg"></div>
+    <div class="container">
+      <div class="banner-dtl text-center">
+        <h2 class="banner-heading">Admin Dashboard</h2>
+        <div class="breadcrumb-block">
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">Admin Dashboard</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- end page banner -->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+       <!-- jquery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>  <!-- jquery library js -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- bootstrap js -->
+<script type="text/javascript" src="js/owl.carousel.js"></script> <!-- owl carousel js -->
+<script type="text/javascript" src="js/jquery.ajaxchimp.js"></script> <!-- mail chimp js -->
+<script type="text/javascript" src="js/smooth-scroll.js"></script> <!-- smooth scroll js -->
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> <!-- magnify popup js --> 
+<script type="text/javascript" src="js/waypoints.min.js"></script> <!-- facts count js required for jquery.counterup.js file -->
+<script type="text/javascript" src="js/jquery.counterup.js"></script> <!-- facts count js-->
+<script type="text/javascript" src="js/menumaker.js"></script> <!-- menu js--> 
+<script type="text/javascript" src="js/jquery.share-tooltip.js"></script> <!-- share tooltip js--> 
+<script type="text/javascript" src="js/price-slider.js"></script> <!-- price slider / filter js-->
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script> <!-- datepicker js-->
+<!-- revolution js files -->
+<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>  
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<!-- end revolution js files -->
+<script type="text/javascript" src="js/theme.js"></script> <!-- custom js -->  
+<script type="text/javascript">
+    var tpj = jQuery;
+    var revapi1066;
+    tpj(document).ready(function () {
+        if (tpj("#rev_slider_1066_1").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_1066_1");
+        }
+        else {
+            revapi1066 = tpj("#rev_slider_1066_1").show().revolution({
+                sliderType: "standard",
+                jsFileLocation: "//server.local/revslider/wp-content/plugins/revslider/public/assets/js/",
+                sliderLayout: "auto",
+                delay: 9000,
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    mouseScrollReverse: "default",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "off",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    },
+                    arrows: {
+                        style: "",
+                        enable: true,
+                        hide_onmobile: true,
+                        hide_onleave: false,
+                        hide_delay: 0,
+                        hide_delay_mobile: 1200,
+                        hide_under: 0,
+                        hide_over: 9999,
+                        tmp: '',
+                        rtl: false,
+                        left: {
+                            h_align: "left",
+                            v_align: "center",
+                            h_offset: 20,
+                            v_offset: 0,
+                            container: "slider",
+                        },
+                        right: {
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 20,
+                            v_offset: 0,
+                            container: "slider",
+                        }
+                    }
+                },
+                responsiveLevels: [1240, 1024, 778, 480],
+                visibilityLevels: [1240, 1024, 778, 480],
+                gridwidth: [1240, 1024, 778, 480],
+                gridwidth: 1000,
+                gridheight: [868, 768, 960, 720],
+                lazyType: "none",
+                parallax: {
+                    type: "mouse",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 46, 47, 48, 49, 50, 55],
+                    type: "mouse",
+                    disable_onmobile: "on"
+                },
+                shadow: 0,
+                spinner: "off",
+                stopLoop: "off",
+                stopAfterLoops: 1,
+                stopAtSlide: 0,
+                shuffle: "off",
+                autoHeight: "off",
+                fullScreenAutoWidth: "off",
+                fullScreenAlignForce: "off",
+                fullScreenOffsetContainer: ".header",
+                fullScreenOffset: "60px",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: false,
+                }
+            });
+        }
+    });
+</script>
+<!-- end jquery -->
+</body>
+</html>

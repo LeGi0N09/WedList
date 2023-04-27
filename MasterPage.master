@@ -1,0 +1,368 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+   <meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Weddlist" />
+<meta name="MobileOptimized" content="320" />
+<link href="images/favicon.ico" rel="icon" type="image/x-icon"/> <!-- favicon -->
+<!-- theme style -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/> <!-- bootstrap css -->
+<!-- revolution -->   
+<link rel="stylesheet" type="text/css" href="revolution/css/settings.css"/> <!-- revolution setting css -->
+<link rel="stylesheet" type="text/css" href="revolution/css/layers.css"/>  <!-- revolution layer css --> 
+<!-- end revolution -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/> <!-- fontawesome css -->
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"/> <!-- google fonts -->
+<link href="css/menumaker.css" rel="stylesheet" type="text/css"/> <!-- menu css -->
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/> <!-- owl carousel css -->
+<link href="css/magnific-popup.css" rel="stylesheet" type="text/css"/> <!-- magnify popup css -->
+<link href="css/datepicker.css" rel="stylesheet" type="text/css"/> <!-- datepicker css -->
+<link href="css/flaticon.css" rel="stylesheet" type="text/css"/> <!-- flaticon css -->
+<link href="css/style.css" rel="stylesheet" type="text/css"/> <!-- custom css -->
+<link href="css/stucture.css" rel="stylesheet" type="text/css"/> <!-- stucture css -->
+
+<!-- end theme style -->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <!-- preloader --> 
+  <div class="preloader">
+    <div class="status">
+      <div class="status-message">
+      </div>
+    </div>
+  </div>
+<!-- end preloader --> 
+    <!--  top bar -->
+  <section class="top-nav-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="top-text">Happily ever after begins here</div>
+        </div>
+        <div class="col-sm-6">
+          <div class="top-detail text-right">
+            <ul>
+              <li><a href="privacy.aspx">Privacy</a></li>
+              <li><a href="faq.aspx">Faq</a></li>
+              <li><a href="help.aspx">Help</a></li>
+              
+              <li><a href="#" data-toggle="modal" data-target="#login-model">Login</a></li>  
+              
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Vertically centered modal -->
+
+       
+         <!-- login popup -->
+      
+      <div class="modal fade login-model" id="login-model" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h5 class="modal-title text-center">Login</h5>
+            </div>
+            <div class="modal-body login-model-body text-center">
+             
+         
+             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                 <ContentTemplate>
+    
+   
+        
+       
+           <div class="col-sm-16">
+                <asp:TextBox ID="TextBox1" runat="server" class="form-control"  placeholder="Enter Registered email"></asp:TextBox>
+           </div>
+       <br />
+          <div class="col-sm-16">     
+          <asp:TextBox ID="TextBox2" Class="form-control" placeholder="Enter Your Password" runat="server" TextMode="Password"></asp:TextBox>
+               </div>
+       
+                     <br />
+                <asp:Button ID="Button1" runat="server" class="btn btn-pink center-block" Text="LogIn" OnClick="Button1_Click" />
+                
+         <p class="sign-in text-center">
+                Create a new Account <a href="#"> Sign Up</a>
+              </p>
+
+                  <asp:Label ID="Label1" CssClass="alert alert-danger" runat="server" Text="*Invalid username password." Visible="false"></asp:Label>
+          
+               <asp:Label ID="Label2" CssClass="alert alert-danger" runat="server" Text="You are not verified." Visible="false"></asp:Label>
+   
+
+          
+</ContentTemplate>
+             </asp:UpdatePanel>
+               
+
+<!-- end register page -->
+            </div>            
+          </div>
+        </div>
+      </div>
+
+      </div>
+      <!-- end login popup -->
+    
+  </section>
+<!--  end top bar -->
+        <!--  navigation -->
+  <header id="nav-bar" class="nav-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-3">
+          <div class="wedding-logo">
+            <a href="Default.aspx"><img src="images/logo.png" class="img-responsive" alt="logo"/></a>
+              
+          </div>
+        </div>
+        <div class="col-md-10 col-sm-9">
+          <div class="navigation">
+            <div id="cssmenu">
+              <ul class="css-menu">
+                <li class="active"><a href="Default.aspx">Home</a>
+                </li>  
+                <li><a href="about.aspx">About<i  aria-hidden="true"></i></a>
+                </li>                         
+                <li><a href="#">Service<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul class="sub-menu">
+                  <%--  <li><a href="#">Category Listing</a></li>
+                    <li><a href="#">Add Listing</a></li>
+                    <li><a href="#">Listing With Left Map</a></li>
+                    <li><a href="#">Listing With Top Map</a></li>
+                    <li><a href="#">Listing Item Description</a></li>
+                    <li><a href="#">Listing Item Video</a></li>--%>
+                    <li><a href="blog.aspx">Blog</a></li>
+                    <li><a href="gallery.aspx">Gallery</a></li>
+                    <li><a href="real_wedding.aspx">Real Wedding</a></li>
+                  </ul>
+                </li>     
+                <li><a href="contact.aspx">Contact</a>
+                </li>
+                  <li><a href="#">Sign Up<i class="fa fa=fa-angle-down"></i></a>
+                  <ul class="sub-menu">
+                    <li><a href="vendor_signUp.aspx">Vendor Sign Up</a></li>
+                    <li><a href="customer_signUp.aspx">Customer Sign Up</a></li>
+                  </ul>
+                </li>
+                  <li><a href="#" data-toggle="modal" data-target="#login-model" >Log In</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </header> 
+<!--  end navigation -->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <!-- footer -->
+  <div id="footer" class="footer-main-block">
+    <div class="container">
+      <div class="footer-block">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="about-widget footer-widget">
+              <h4 class="footer-heading">About Weddlist</h4>
+              <div class="about-dtl">
+                <p style="font-size:large">Weddlist has been trusted by over 2​​ m​illio​n brides & grooms​ all over the world​ to plan their big day.​ </p>
+              <p>      So sit back, log on to WedMeGood, and ​plan the wedding of your dreams​!</p>
+                <a href="#" class="btn btn-white">Find a Vendor</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-6">
+            <div class="news-widget footer-widget">
+              <h4 class="footer-heading">Latest News</h4>
+              <ul>
+                <li>
+                  <div class="row"> 
+                    <div class="col-xs-3">
+                      <div class="latest-news-img">
+                        <img src="images/footer-news-1.jpg" class="img-responsive" alt="news"/>
+                      </div>
+                    </div>
+                    <div class="col-xs-9">
+                      <div class="latest-news-dtl">
+                        <a href="blog-detail.html">Sed ut perspiciatis unde omnis is te natus error sit volup</a>
+                        <div class="date">March 22, 2017</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row"> 
+                    <div class="col-xs-3">
+                      <div class="latest-news-img">
+                        <img src="images/footer-news-2.jpg" class="img-responsive" alt="news"/>
+                      </div>
+                    </div>
+                    <div class="col-xs-9">
+                      <div class="latest-news-dtl">
+                        <a href="blog-detail.html">Excepteur sint occaecat cupidatat non proident,</a>
+                        <div class="date">March 21, 2017</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="subscribe-widget footer-widget">
+              <h4 class="footer-heading">Main Office</h4>
+             <p style="color:white">E-1202, Titanium City Centre<br /> Near Aykar Bhavan, <br />100 Feet Anand Nagar Rd, <br />Ahmedabad, <br />Gujarat 380015</p>
+              <ul class="social-btns">
+                <li><a class="btn facebook" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="btn twitter" href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="btn pinterest" href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-block text-center">
+      <div class="container">
+        <p>&copy; 2023 All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+<!-- end footer -->
+        <!-- jquery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>  <!-- jquery library js -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- bootstrap js -->
+<script type="text/javascript" src="js/owl.carousel.js"></script> <!-- owl carousel js -->
+<script type="text/javascript" src="js/jquery.ajaxchimp.js"></script> <!-- mail chimp js -->
+<script type="text/javascript" src="js/smooth-scroll.js"></script> <!-- smooth scroll js -->
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> <!-- magnify popup js --> 
+<script type="text/javascript" src="js/waypoints.min.js"></script> <!-- facts count js required for jquery.counterup.js file -->
+<script type="text/javascript" src="js/jquery.counterup.js"></script> <!-- facts count js-->
+<script type="text/javascript" src="js/menumaker.js"></script> <!-- menu js--> 
+<script type="text/javascript" src="js/jquery.share-tooltip.js"></script> <!-- share tooltip js--> 
+<script type="text/javascript" src="js/price-slider.js"></script> <!-- price slider / filter js-->
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script> <!-- datepicker js-->
+<!-- revolution js files -->
+<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>  
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<!-- end revolution js files -->
+<script type="text/javascript" src="js/theme.js"></script> <!-- custom js -->  
+<script type="text/javascript">
+    var tpj = jQuery;
+    var revapi1066;
+    tpj(document).ready(function () {
+        if (tpj("#rev_slider_1066_1").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_1066_1");
+        }
+        else {
+            revapi1066 = tpj("#rev_slider_1066_1").show().revolution({
+                sliderType: "standard",
+                jsFileLocation: "//server.local/revslider/wp-content/plugins/revslider/public/assets/js/",
+                sliderLayout: "auto",
+                delay: 9000,
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    mouseScrollReverse: "default",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "off",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    },
+                    arrows: {
+                        style: "",
+                        enable: true,
+                        hide_onmobile: true,
+                        hide_onleave: false,
+                        hide_delay: 0,
+                        hide_delay_mobile: 1200,
+                        hide_under: 0,
+                        hide_over: 9999,
+                        tmp: '',
+                        rtl: false,
+                        left: {
+                            h_align: "left",
+                            v_align: "center",
+                            h_offset: 20,
+                            v_offset: 0,
+                            container: "slider",
+                        },
+                        right: {
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 20,
+                            v_offset: 0,
+                            container: "slider",
+                        }
+                    }
+                },
+                responsiveLevels: [1240, 1024, 778, 480],
+                visibilityLevels: [1240, 1024, 778, 480],
+                gridwidth: [1240, 1024, 778, 480],
+                gridwidth: 1000,
+                gridheight: [868, 768, 960, 720],
+                lazyType: "none",
+                parallax: {
+                    type: "mouse",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 46, 47, 48, 49, 50, 55],
+                    type: "mouse",
+                    disable_onmobile: "on"
+                },
+                shadow: 0,
+                spinner: "off",
+                stopLoop: "off",
+                stopAfterLoops: 1,
+                stopAtSlide: 0,
+                shuffle: "off",
+                autoHeight: "off",
+                fullScreenAutoWidth: "off",
+                fullScreenAlignForce: "off",
+                fullScreenOffsetContainer: ".header",
+                fullScreenOffset: "60px",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: false,
+                }
+            });
+        }
+    });
+</script>
+<!-- end jquery -->
+    </div>
+    </form>
+</body>
+</html>
