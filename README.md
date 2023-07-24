@@ -1,4 +1,4 @@
-# WedList Web App: Revolutionizing Wedding Planning
+# WedList : Revolutionizing Wedding Planning
 
 Welcome to WedList, the cutting-edge web application that is set to transform the way weddings are planned and organized. Say goodbye to the traditional manual systems and embrace the power of computerized automation and intuitive software designed to meet all your wedding planning needs.
 
